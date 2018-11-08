@@ -7,12 +7,12 @@ default:
   remote:
     # settings for the commands that will be run remotely
     log:
-      noodoo: /var/log/noodoo/noodoo.log
-      queue: /var/log/noodoo/queue.log
-    reload_script: /usr/local/bin/noodoo_reload
-    restart_script: /usr/local/bin/noodoo_restart
+      app: /var/log/app/app.log
+      queue: /var/log/app/app-queue.log
+    reload_script: /usr/local/bin/app_reload
+    restart_script: /usr/local/bin/app_restart
     pre_run: echo 'no reset dir script'
-    post_run: /usr/local/bin/noodoo_status
+    post_run: /usr/local/bin/app_status
 
   local:
     # settings for the commands that will be run localy
